@@ -1,3 +1,4 @@
+
 require 'rest-client'
 require 'json'
 #
@@ -15,8 +16,8 @@ origin_address = 'https://restcountries.eu/rest/v2/all'
 origin_response = RestClient::Request.execute(method: :get, url: origin_address)
 # origin_response = RestClient.get('https://restcountries.eu/rest/v2/all')
 returned_origin = JSON.parse(origin_response)
-puts returned_origin
-puts "helen is a beast"
+# puts returned_origin
+# puts "helen is a beast"
 
 
 counter = 0
