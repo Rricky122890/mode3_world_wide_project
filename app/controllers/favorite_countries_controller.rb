@@ -18,6 +18,14 @@ class FavoriteCountriesController < ApplicationController
     # end
   end
 
+  def destroy
+    # byebug
+    @favorite_country = FavoriteCountry.find_by(user_id: params["user_id"], country_id: params["country_id"])
+    @favorite_country.destroy
+    # byebug
+
+  end
+
 
 
 private
