@@ -38,11 +38,6 @@ GEM
       activemodel (= 5.2.2)
       activesupport (= 5.2.2)
       arel (>= 9.0)
-    activerecord-jdbc-adapter (50.0)
-      activerecord (>= 2.2)
-    activerecord-jdbcpostgresql-adapter (50.0)
-      activerecord-jdbc-adapter (~> 50.0)
-      jdbc-postgres (>= 9.4, < 43)
     activestorage (5.2.2)
       actionpack (= 5.2.2)
       activerecord (= 5.2.2)
@@ -74,7 +69,6 @@ GEM
       domain_name (~> 0.5)
     i18n (1.5.3)
       concurrent-ruby (~> 1.0)
-    jdbc-postgres (42.1.4)
     json (1.8.6)
     json (1.8.6-java)
     jsonapi-renderer (0.2.0)
@@ -105,6 +99,7 @@ GEM
     nokogiri (1.10.1)
       mini_portile2 (~> 2.4.0)
     nokogiri (1.10.1-java)
+    pg (1.1.4)
     puma (3.12.0)
     puma (3.12.0-java)
     rack (2.0.6)
@@ -179,11 +174,11 @@ PLATFORMS
 
 DEPENDENCIES
   active_model_serializers
-  activerecord-jdbcpostgresql-adapter
   bootsnap (>= 1.1.0)
   byebug
   json (~> 1.8, >= 1.8.3)
   listen (>= 3.0.5, < 3.2)
+  pg (>= 0.18, < 2.0)
   puma (~> 3.11)
   rack-cors
   rails (~> 5.2.1)
@@ -193,7 +188,7 @@ DEPENDENCIES
   tzinfo-data
 
 RUBY VERSION
-   ruby 2.3.3p0 (jruby 9.1.17.0)
+   ruby 2.6.1p33
 
 BUNDLED WITH
    2.0.1
