@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
-  validates :first_name, presence:true
-  validates :last_name, presence:true
+  validate :first_name, presence:true
+  validate :last_name, presence:true
 
   def index
 
